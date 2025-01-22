@@ -1,0 +1,485 @@
+*
+{
+    scroll-behavior: smooth;
+    list-style: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+@font-face 
+{
+    font-family: PlaywriteIN;
+    src: url(./DancingScript-VariableFont_wght.ttf);
+}
+
+/* Menu-Bar */
+header
+{
+    height: 12vh;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background: linear-gradient(rgba(20, 20, 20, 0.8), rgba(24, 22, 22, 0.8), rgba(20, 20, 20,0.8));
+}
+#navbar
+{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.logo
+{
+    font-size: 1.5rem;
+}
+li a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    position: relative;
+}
+#navbar li a::after
+{
+    content: "";
+    position: absolute;
+    top: 2rem;
+    left: 0;
+    width: 0%;
+    transition: 0.3s all ease-in;
+    border-bottom: 2px solid white;
+}
+#navbar li a:hover::after
+{
+    width: 60%;
+    transition: 0.3s all ease-out;
+}
+#menu-icon
+{
+    color: white;
+    font-size: 2.5rem;
+    display: none;
+}
+.book-now, .book-now-1
+{
+    background-color: rgb(133, 98, 12);
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 5px;
+}
+.book-now-1
+{
+    display: none;
+}
+.book-now:hover
+{
+    color: black;
+    background-color: goldenrod;
+    transition: 0.3s all linear;
+}
+.book-now-1:hover
+{
+    color: black;
+    background-color: goldenrod;
+    transition: 0.3s all linear;
+}
+@media (max-width:992px)
+{
+    #navbar
+    {
+        position: absolute;
+        width: 100%;
+        top: -573px;
+        left: 0;
+        padding: 20px 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        transition: 0.1s;
+        background: linear-gradient(rgba(20, 20, 20, 0.8), rgba(24, 22, 22, 0.8), rgba(20, 20, 20,0.8));
+    }
+    #navbar.active
+    {
+        top: 100%;
+    }
+    .book-now
+    {
+        display: none;
+    }
+    .book-now-1
+    {
+        display: initial;
+    }
+    #menu-icon
+    {
+        display: initial;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 900px)
+{
+    .logo
+    {
+        font-size: 2rem;
+    }
+    li a
+    {
+        font-size: 1.3rem;
+    }
+    #menu-icon
+    {
+        font-size: 3.5rem;
+    }
+}
+
+/* Section-Home */
+#home
+{
+    background-image: url(./Images/Background.png);
+    background-size: cover;
+    height: 100vh;
+}
+#gradient
+{
+    background: linear-gradient(rgba(22, 22, 22,0), rgba(22, 21, 21,0.6), rgba(20, 20, 20,0.8));
+}
+#text
+{
+    font-size: 3.5rem;
+    text-shadow: 1px 1px gray;
+}
+@media screen and (min-width: 768px) and (max-width: 992px)
+{
+    #home
+    {
+        height: auto;
+    }
+    #text
+    {
+        font-size: 3rem;
+    }
+    #gradient
+    {
+        padding: 15rem 0px 5rem 0px
+    }
+}
+@media (max-width:767px)
+{
+    #home
+    {
+        height: auto;
+    }
+    #text
+    {
+        font-size: 2.8rem;
+    }
+    #gradient
+    {
+        padding: 8rem 0px 5rem 0px
+    }
+}
+@media (max-width:340px)
+{
+    #home
+    {
+        height: auto;
+    }
+    #text
+    {
+        font-size: 2.5rem;
+    }
+    #gradient
+    {
+        padding: 6rem 0px 5rem 0px
+    }
+}
+
+/* Section-About */
+#about
+{
+    background-image: url(./Images/Background\ Stars.png);
+    background-size: cover;
+}
+#about-img
+{
+    height: 50vh;
+    width: auto;
+}
+.name
+{
+    font-family: PlaywriteIN;
+}
+@media (max-width:578px)
+{
+    #about-img
+    {
+        height: 30vh;
+    }
+}
+
+/* Section-Special */
+#special
+{
+    background-image: url(./Images/Background\ Stars.png);
+    background-size: cover;
+    height: 100vh;
+}
+@media (max-width:992px)
+{
+    #special
+    {
+        height: auto;
+    }
+}
+#Con-fluid
+{
+    background: linear-gradient(rgba(21, 20, 26, 0.7), rgba(21, 19, 26, 0.7), rgba(24, 22, 29, 0.7));
+}
+
+/* Section-Cook */
+#cook
+{
+    background-image: url(./Images/Background\ Stars.png);
+    background-size: cover;  
+    height: 100vh; 
+}
+@media (max-width:992px)
+{
+    #cook
+    {
+        height: auto;
+    }
+}
+
+/* Section-Menu */
+#menu
+{
+    background-image: url(./Images/Background\ Stars.png);
+    background-size: cover;  
+    height: 120vh; 
+}
+.menu-text
+{
+    font-size: 15px;
+}
+.line-1
+{
+    width: 5vw;
+    border: 1px solid goldenrod;
+}
+.img
+{
+    height: 10vh;
+}
+@media (max-width:992px)
+{
+    #menu
+    {
+        height: auto;
+        padding: 10px 0px;
+    }
+    .img
+    {
+        height: 8vh;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 992px)
+{
+    .price
+    {
+        font-size: 1.4rem;
+    }
+    .menu-text
+    {
+        font-size: 1.4rem;
+    }
+}
+@media (max-width: 578px)
+{
+    .img
+    {
+        height: 6vh;
+    }
+    .menu-text
+    {
+        font-size: 11px;
+    }
+}
+@media (max-width:320px)
+{
+    .menu-text
+    {
+        font-size: 12px;
+    }
+}
+
+/* Section-Offer */
+#offer
+{
+    background-image: url(./Images/Background\ Stars.png);
+    background-size: cover;  
+    height: 80vh; 
+}
+#explore
+{
+    color: white;
+    border: 2px solid white;
+}
+#explore:hover
+{
+    color: goldenrod;
+    border: 2px solid goldenrod;
+    transition: 0.3s all linear;
+}
+@media (max-width:992px)
+{
+    #offer
+    {
+        height: auto;
+    }
+}
+
+/* Section-review */
+#review
+{
+    height: 40vh;
+    background-image: url(./Images/Background\ Stars.png);
+    background-size: cover;
+}
+@media(max-width:992px)
+{
+    #review
+    {
+        height: auto;
+    }
+}
+
+/* Section-Blogs */
+#blogs
+{
+    background-image: url(./Images/Background\ Stars.png);
+    background-size: cover;  
+}
+#box
+{
+    height: auto;
+    background: linear-gradient(rgba(21, 20, 26, 0.7), rgba(21, 19, 26, 0.7), rgba(24, 22, 29, 0.7));
+}
+#img-1
+{
+    height: 40vh;
+}
+#text-1
+{
+    width: 40vh;
+}
+.read-more-1
+{
+    color: white;
+}
+.read-more-1:hover
+{
+    color: goldenrod;
+    transition: 0.3s all linear;
+}
+@media (max-width:992px)
+{
+    #img-1
+    {
+        height: 30vh;
+    }
+    #text-1
+    {
+        height: auto;
+        padding: 20px 0px;
+    }
+}
+
+/* Section-Footer */
+#footer
+{
+    background-image: url(./Images/Background\ Stars.png);
+    background-size: cover;   
+    height: 60vh;
+}
+#icn
+{
+    font-size: 1.2rem;
+    border-radius: 8px;
+    color: white;
+    border: 1px solid white;
+    padding: 5px;
+}
+#icn:hover
+{
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    transition: 0.3s all linear;
+}
+#con-icn
+{
+    color: goldenrod;
+    font-size: 1.5rem;
+}
+@media (max-width:992px)
+{
+    #footer
+    {
+        height: auto;
+    }
+}
+
+/* Section-Copyright */
+#copyright
+{
+    height: 30vh;
+    background-image: url(./Images/Background\ Stars.png);
+    background-size: cover;
+}
+#copy
+{
+    background: linear-gradient(rgba(21, 20, 26, 0.7), rgba(21, 19, 26, 0.7), rgba(24, 22, 29, 0.7));
+}
+input
+{
+    background-color: transparent;
+    width: 30vw;
+    border: 1px solid white;
+    outline: none;
+    padding: 8px;
+    color: white;
+}
+button
+{
+    background-color: transparent;
+    border: 1px solid white;
+    outline: none;
+    padding: 8px 25px;
+    color: white;
+    font-size: 1rem;
+}
+button:hover
+{
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    transition: 0.3s all linear;
+}
+@media (max-width:992px)
+{
+    #copyright
+    {
+        height: auto;
+    }
+    input
+    {
+        width: unset;
+        text-align: center;
+        padding: 5px 35px;
+    }
+    button
+    {
+        padding: 5px 25px;
+    }
+}
